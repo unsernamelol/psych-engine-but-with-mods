@@ -2371,13 +2371,19 @@ class PlayState extends MusicBeatState
 		if (health > 2)
 			health = 2;
 
-		if (healthBar.percent < 20)
+		if (healthBar.percent < 30)
 			iconP1.animation.curAnim.curFrame = 1;
+                else
+                if (healthbar.percent > 70)
+                        iconP1.animation.curSnim.curFrame - 2;
 		else
 			iconP1.animation.curAnim.curFrame = 0;
 
-		if (healthBar.percent > 80)
+		if (healthBar.percent > 70)
 			iconP2.animation.curAnim.curFrame = 1;
+		else
+                if (healthBar.percent < 30)
+			iconP2.animation.curAnim.curFrame = 2;
 		else
 			iconP2.animation.curAnim.curFrame = 0;
 
